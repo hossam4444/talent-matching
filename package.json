@@ -1,0 +1,11 @@
+{
+  "name": "talent-matching",
+  "version": "1.0.0",
+  "description": "Open Source Project allow developers to make teams and collaborate to gain professional team experience, produce great open source projects, private projects, and more",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "author": "Hossam Tarek",
+  "license": "MIT"
+}
