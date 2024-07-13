@@ -4,12 +4,19 @@
   "description": "Open Source Project allow developers to make teams and collaborate to gain professional team experience, produce great open source projects, private projects, and more",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "start:prod": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www"
   },
   "author": "Hossam Tarek",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "glob": "^11.0.0",
+    "mongoose": "^8.5.0",
+    "nanoid": "^5.0.7",
+    "redis": "^4.6.15"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
