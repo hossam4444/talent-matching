@@ -1,8 +1,8 @@
-const { REDIS_PASS, REDIS_HOST, REDIS_PORT, REDIS_USER } = require("./env.config");
+require('dotenv').config();
 
 module.exports = {
-  pass: REDIS_PASS || null,
-  user:REDIS_USER || "default",
-  host: REDIS_HOST,
-  port: REDIS_PORT,
+  pass: process.env.REDIS_PASS || null,
+  user: process.env.REDIS_USER || 'default',
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT,
 };
