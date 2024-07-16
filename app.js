@@ -28,7 +28,11 @@ app.use(cookieParser());
 app.use('/api', apiRoutes);
 
 app.all('*', (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+  next(
+    res.status(404).json({
+      message: `that rout not found ${req.url} `,
+    }),
+  );
 });
 
 module.exports = app;
