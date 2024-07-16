@@ -1,6 +1,6 @@
-const path = require("path");
-const glob = require("glob");
-const { rootPath } = require("../../config/env.config");
+const path = require('path');
+const glob = require('glob');
+const { rootPath } = require('../../config/env.config');
 
 module.exports = (pattern) => {
   const modules = [];
@@ -9,7 +9,7 @@ module.exports = (pattern) => {
     if (err) {
       console.error(
         `Error finding the file that match the pattern ${pattern}`,
-        err
+        err,
       );
       return;
     }

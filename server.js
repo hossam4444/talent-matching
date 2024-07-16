@@ -13,7 +13,7 @@ const app = require('./app');
 // connect to DB
 const DB = process.env.DATABASE.replace(
   '<DATABASE_USER>',
-  process.env.DATABASE_USER
+  process.env.DATABASE_USER,
 )
   .replace('<PASSWORD>', process.env.DATABASE_PASSWORD)
   .replace('<DATABASE_NAME>', process.env.DATABASE_NAME);
