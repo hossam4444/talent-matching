@@ -1,4 +1,4 @@
-const { Schema, model } = mongoose;
+const { Schema, model } = require("mongoose");
 
 const tokenSchema = new Schema({
   // TODO: implement encryption or hashing for the token
