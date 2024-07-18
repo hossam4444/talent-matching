@@ -1,4 +1,4 @@
-const loader = require("./_common/loader");
+const loader = require('./_common/loader');
 
 module.exports = class RoutersLoader {
   constructor({ versions }) {
@@ -13,8 +13,8 @@ module.exports = class RoutersLoader {
     });
   }
 
-  getRouters(v = "all") {
-    if (v == "all") return this.routers;
+  getRouters(v = 'all') {
+    if (v === 'all') return this.routers;
     return this.routers[v];
   }
 };

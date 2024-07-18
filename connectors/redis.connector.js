@@ -1,6 +1,6 @@
-const { createClient } = require("redis");
-const redisConfig = require("../config/redis.config");
-const redisURI = require("./utils/redisURI");
+const { createClient } = require('redis');
+const redisConfig = require('../config/redis.config');
+const redisURI = require('./utils/redisURI');
 
 module.exports = {
   connect: async () => {
@@ -12,9 +12,9 @@ module.exports = {
         client = createClient({ url });
       } else client = createClient();
       await client.connect();
-      console.log("Redis client connected.");
+      console.log('Redis client connected.');
     } catch (error) {
-      console.error("Redis client error:", error);
+      console.error('Redis client error:', error);
     }
   },
   disconnect: async (client) => {

@@ -1,4 +1,4 @@
-const loader = require("./_common/loader");
+const loader = require('./_common/loader');
 
 module.exports = class MiddlewareLoader {
   constructor() {
@@ -7,7 +7,7 @@ module.exports = class MiddlewareLoader {
   }
 
   _load() {
-    loader("./mw/**/*.mw.js");
+    loader('./mw/**/*.mw.js');
   }
 
   getMiddlewares() {

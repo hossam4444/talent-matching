@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require('mongoose');
 
 const tokenSchema = new Schema({
   // TODO: implement encryption or hashing for the token
@@ -8,7 +8,7 @@ const tokenSchema = new Schema({
   },
   userId: {
     type: Schema.Types.ObjectId,
-    ref: "User",
+    ref: 'User',
     required: true,
   },
   session: {
@@ -40,6 +40,6 @@ const tokenSchema = new Schema({
   },
 });
 
-const Token = model("Token", tokenSchema);
+const Token = model('Token', tokenSchema);
 
 module.exports = Token;
