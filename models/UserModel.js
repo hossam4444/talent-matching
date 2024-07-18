@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+
 const userSalt = process.env.USER_SALT;
 // const crypto = require('crypto');
 // const bcrypt = require('bcryptjs');

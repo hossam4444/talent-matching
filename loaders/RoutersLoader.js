@@ -14,7 +14,7 @@ module.exports = class RoutersLoader {
   }
 
   getRouters(v = 'all') {
-    if (v == 'all') return this.routers;
+    if (v === 'all') return this.routers;
     return this.routers[v];
   }
 };

@@ -1,7 +1,8 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const morgan = require('morgan');
 
-const redisConnector = require('./connectors/redis.connector');
+// const redisConnector = require('./connectors/redis.connector');
 const apiRoutes = require('./routes/index');
 
 // Start express app
