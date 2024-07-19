@@ -1,4 +1,4 @@
-const User = require('../models/UserModel');
+const User = require('../models/User');
 const factory = require('./handlerFactory');
 
 exports.getUser = factory.getOne(User);
