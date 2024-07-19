@@ -13,7 +13,7 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...compat.extends('airbnb', 'prettier', 'plugin:node/recommended'),
+  ...compat.extends('prettier', 'plugin:node/recommended'),
   {
     plugins: {
       prettier,
