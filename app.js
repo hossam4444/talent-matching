@@ -2,14 +2,16 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 
-// const redisConnector = require('./connectors/redis.connector');
+const redisConnector = require('./connectors/redis.connector');
 const apiRoutes = require('./routes/index');
+const mongoConnector= require('./connectors/mongo.connector');
 
 // Start express app
 const app = express();
 
 // connectors
-// redisConnector.connect();
+mongoConnector.connect()
+redisConnector.connect();
 
 // GLOBAL MIDDLEWARES
 
