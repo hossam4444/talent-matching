@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
-const { URI } = require('../config/mongo.config');
+const {
+  URI,
+  DATABASE_NAME,
+  DATABASE_USER,
+  DATABASE_PASSWORD,
+} = require('../config/mongo.config');
 
 module.exports = {
   connect: async () => {
@@ -7,11 +12,11 @@ module.exports = {
       const DB = URI.replace('<DATABASE_USER>', DATABASE_USER)
         .replace('<PASSWORD>', DATABASE_PASSWORD)
         .replace('<DATABASE_NAME>', DATABASE_NAME);
-        console.log(DB);
+      console.log(DB);
       await mongoose.connect(DB);
       console.log('DB connected successfuly!');
     } catch (error) {
-      console.error('DB connection failed!');
+      console.error('DB connection failed!', error);
     }
   },
 
