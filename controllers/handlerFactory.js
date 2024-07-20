@@ -85,3 +85,25 @@ exports.getAll = (Model) =>
       },
     });
   });
+
+exports.getAllPagination = (Model) =>
+  catchAsync(async (req, res, next) => {
+    const page = parseInt(req.query.page, 10) || 1;
+    const limit = parseInt(req.query.limit, 10) || 10;
+    const skip = (page - 1) * limit;
+
+    const doc = await Model.find().skip(skip).limit(limit);
+
+    const totalDocuments = await Model.countDocuments();
+    const totalPages = Math.ceil(totalDocuments / limit);
+
+    res.status(200).json({
+      status: 'success',
+      results: doc.length,
+      currentPage: page,
+      totalPages: totalPages,
+      data: {
+        data: doc,
+      },
+    });
+  });
